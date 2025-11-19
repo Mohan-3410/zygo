@@ -1,3 +1,5 @@
+/* eslint-env jest */
+
 // Mock react-native-gesture-handler
 jest.mock('react-native-gesture-handler', () => ({
   GestureHandlerRootView: 'GestureHandlerRootView',

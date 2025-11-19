@@ -1,97 +1,116 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Zygo - Enterprise Mobile Gaming Application
 
-# Getting Started
+A professional-grade React Native mobile gaming application featuring four engaging puzzle games with a comprehensive leaderboard system.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+![React Native](https://img.shields.io/badge/React%20Native-0.82.1-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-blue)
+![Redux Toolkit](https://img.shields.io/badge/Redux%20Toolkit-2.0.0-purple)
 
-## Step 1: Start Metro
+## 🎮 Featured Games
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+### 1. Tango (Sun & Moon Puzzle)
+Fill the grid with suns ☀️ and moons 🌙 following these rules:
+- No more than 2 of the same symbol adjacent
+- Equal numbers of suns and moons in each row/column
+- Tap cells to cycle through symbols
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+### 2. Queens Puzzle  
+Place queens 👑 on a colored grid:
+- Exactly one queen per row, column, and color region
+- Queens cannot touch each other (including diagonally)
+- Tap once for X, twice for queen
 
-```sh
-# Using npm
-npm start
+### 3. Mini Sudoku (6x6)
+Classic Sudoku with a twist:
+- 6x6 grid with 2x3 blocks
+- Fill with numbers 1-6
+- Standard Sudoku rules apply
 
-# OR using Yarn
-yarn start
+### 4. Tango Connect
+Connect the dots in order:
+- Draw paths from 1→2→3→4...
+- Fill every cell in the grid
+- Paths cannot cross themselves
+
+## ✨ Features
+
+- 🎯 **Four Complete Puzzle Games** - Each with unique gameplay mechanics
+- ⏱️ **Real-time Timer** - Track your solving time
+- 🔢 **Move Counter** - Monitor your efficiency
+- ↩️ **Undo/Redo** - Correct mistakes without penalty
+- 💡 **Hint System** - Get help when stuck
+- 🏆 **Leaderboard** - Compare scores with others
+- 💾 **Auto-save** - Never lose your progress
+- 🎚️ **Difficulty Levels** - Easy, Medium, and Hard modes
+- 📳 **Haptic Feedback** - Tactile response for interactions
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js >= 20
+- npm or yarn
+- React Native development environment
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/Mohan-3410/zygo.git
+cd zygo
+
+# Install dependencies
+npm install
+
+# Install iOS dependencies (Mac only)
+cd ios && pod install && cd ..
 ```
 
-## Step 2: Build and run your app
+### Running the Application
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
+```bash
+# iOS
 npm run ios
 
-# OR using Yarn
-yarn ios
+# Android
+npm run android
+
+# Start Metro Bundler
+npm start
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+## 🧪 Development
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+```bash
+# Linting
+npm run lint
 
-## Step 3: Modify your app
+# Type Checking
+npx tsc --noEmit
+```
 
-Now that you have successfully run the app, let's make changes!
+## 📦 Tech Stack
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+- **React Native** 0.82.1 - Mobile framework
+- **TypeScript** 5.8.3 - Type safety
+- **Redux Toolkit** 2.0.0 - State management
+- **React Navigation** 7.0.0 - Routing and navigation
+- **AsyncStorage** 2.1.0 - Local data persistence
+- **React Native Gesture Handler** - Touch gestures
+- **React Native Reanimated** - Smooth animations
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+## 🎨 Design Philosophy
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+- **Clean Architecture** - Separation of concerns
+- **Component Reusability** - DRY principles
+- **Type Safety** - 100% TypeScript
+- **Performance** - Optimized rendering
+- **User Experience** - Intuitive interactions
 
-## Congratulations! :tada:
+## 📱 Platform Support
 
-You've successfully run and modified your React Native App. :partying_face:
+- ✅ iOS 13.0+
+- ✅ Android 6.0+ (API 23+)
 
-### Now what?
+---
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+**Note**: This is a complete, production-ready implementation featuring clean code, comprehensive state management, and professional game mechanics.
